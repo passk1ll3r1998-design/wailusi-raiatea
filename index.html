@@ -1,172 +1,267 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#123d35">
-<title>WaiLusi | Faaroa River Experience</title>
-<meta name="description" content="Discover the beauty of Raiatea with WaiLusi: a guided Faaroa River kayak experience, botanical garden walk, tropical fruit tasting and traditional coconut demonstration.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Discover Raiatea with WaiLusi. Enjoy guided kayaking adventures through the beautiful Faaroa River in French Polynesia.">
+<meta name="theme-color" content="#123d32">
+<title>WaiLusi Raiatea | Discover Nature</title>
 <style>
-:root{--green:#123d35;--deep:#092c26;--sand:#f5f0e4;--gold:#d5b675;--white:#fff}
-*{box-sizing:border-box}
+:root {
+  --green:#123d32;
+  --deep:#092b25;
+  --gold:#d6b77a;
+  --cream:#f8f6ef;
+  --text:#24342e;
+}
+*{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--sand);color:#18382f;line-height:1.65}
-header{background:var(--green);color:white;padding:16px 6%;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
-.brand{font-size:27px;font-weight:800;letter-spacing:3px}
-.tagline{font-size:11px;letter-spacing:2px;color:var(--gold)}
-nav{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-nav a{color:white;text-decoration:none;font-size:13px}
-.lang{background:transparent;border:1px solid var(--gold);color:white;border-radius:20px;padding:7px 12px}
-.hero{min-height:590px;padding:85px 7%;display:flex;align-items:center;color:white;background:linear-gradient(90deg,rgba(4,38,30,.88),rgba(4,38,30,.25)),url('https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1800&q=85') center/cover}
-.hero-inner{max-width:690px}
-.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:bold}
-h1{font-size:clamp(42px,7vw,76px);line-height:1.06;margin:15px 0 22px}
-.hero p{font-size:18px;max-width:580px}
-.btn{display:inline-block;background:var(--gold);color:var(--deep);font-weight:bold;text-decoration:none;padding:13px 22px;border-radius:4px;margin:12px 8px 0 0;border:0;cursor:pointer}
-.btn.outline{background:transparent;border:1px solid white;color:white}
-section{padding:68px 7%}
-.section-head{text-align:center;max-width:720px;margin:0 auto 35px}
-h2{font-size:clamp(28px,4vw,43px);line-height:1.15;margin:8px 0 16px;color:var(--green)}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:white;border-radius:9px;overflow:hidden;box-shadow:0 5px 20px #18382f12}
-.card img{width:100%;height:200px;object-fit:cover;display:block}
-.card-content{padding:20px}
-.card h3{color:var(--green);margin-top:0}
-.number{color:#a17e38;font-size:12px;letter-spacing:2px;font-weight:bold}
-.story{background:#e8e2d2}
-.story-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:35px;align-items:center}
-.story img{width:100%;max-height:390px;object-fit:cover;border-radius:8px}
-.pill{display:inline-block;border:1px solid #b9c7b9;border-radius:30px;padding:6px 12px;margin:5px;font-size:13px}
-.booking{background:var(--green);color:white}
-.booking h2{color:white}
-.booking .section-head p{color:#e1e9df}
-form{background:white;color:#18382f;padding:25px;border-radius:9px;max-width:700px;margin:auto}
-label{display:block;font-size:13px;font-weight:bold;margin:14px 0 5px}
-input,select,textarea{width:100%;padding:12px;border:1px solid #cbd5cb;border-radius:4px;font:inherit;background:#fff}
-textarea{min-height:95px}
-form .btn{width:100%;font-size:16px}
-.small{font-size:12px;opacity:.8}
-footer{background:var(--deep);color:white;text-align:center;padding:30px 7%}
-footer a{color:var(--gold)}
-a:focus,button:focus,input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:2px}
-@media(max-width:600px){header{padding:14px 5%}nav{gap:10px}nav a{font-size:12px}.hero{min-height:540px;padding:65px 6%}section{padding:52px 6%}.brand{font-size:24px}}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--cream);line-height:1.65}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+header{position:absolute;top:0;width:100%;z-index:10;padding:20px 7%;display:flex;justify-content:space-between;align-items:center;color:white}
+.logo{font-family:Georgia,serif;font-size:27px;letter-spacing:3px;font-weight:bold}
+.logo small{display:block;font:9px Arial;letter-spacing:4px;text-align:center}
+nav{display:flex;gap:24px;align-items:center;font-size:13px}
+nav a:hover{color:var(--gold)}
+.nav-book{border:1px solid var(--gold);padding:10px 17px}
+.menu{display:none;background:none;border:0;color:white;font-size:27px}
+.hero{min-height:690px;height:95vh;max-height:850px;display:flex;align-items:center;justify-content:center;text-align:center;color:white;padding:100px 20px 50px;background:linear-gradient(90deg,rgba(4,29,24,.65),rgba(4,29,24,.25)),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=85') center/cover}
+.hero-content{max-width:800px}
+.eyebrow{color:var(--gold);letter-spacing:4px;text-transform:uppercase;font-size:11px;font-weight:bold}
+.hero h1{font:clamp(48px,9vw,90px) Georgia,serif;line-height:1.05;margin:22px 0}
+.hero p{font-size:17px;max-width:600px;margin:0 auto 30px;color:#f1f1e9}
+.btn{display:inline-block;background:var(--gold);color:var(--deep);padding:14px 25px;font-weight:bold;font-size:13px;letter-spacing:1px;border:0;cursor:pointer}
+.btn-outline{background:transparent;border:1px solid white;color:white;margin-left:8px}
+section{padding:85px 7%}
+.section-head{text-align:center;max-width:680px;margin:0 auto 42px}
+.section-head h2{font:clamp(32px,5vw,48px) Georgia,serif;color:var(--green);margin:10px 0}
+.section-head p{color:#68736c}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center;max-width:1150px;margin:auto}
+.intro img{width:100%;height:430px;object-fit:cover}
+.intro h2{font:42px Georgia,serif;color:var(--green);line-height:1.2;margin:12px 0 20px}
+.intro p{margin-bottom:17px;color:#58645d}
+.kayak{background:#eaece3}
+.kayak-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center;max-width:1150px;margin:auto}
+.kayak img{width:100%;height:430px;object-fit:cover}
+.kayak h2{font:42px Georgia,serif;color:var(--green);margin:12px 0}
+.details{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}
+.detail{background:white;padding:12px 16px;font-size:13px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:1150px;margin:auto}
+.gallery-grid img{width:100%;height:250px;object-fit:cover}
+.story{background:var(--green);color:white;text-align:center}
+.story h2{font:42px Georgia,serif;margin:12px 0}
+.story p{max-width:700px;margin:0 auto;color:#e1e9e2}
+.future{background:#f0ede3}
+.future-card{max-width:800px;margin:auto;border:1px solid #d7d0bd;padding:35px;text-align:center}
+.future-card h3{font:29px Georgia,serif;color:var(--green);margin-bottom:12px}
+.future-card p{color:#657068}
+.booking{background:#e7ebe4}
+.booking-form{max-width:700px;margin:auto;background:white;padding:35px}
+.booking-form h3{font:30px Georgia,serif;color:var(--green);margin-bottom:8px}
+.booking-form>p{font-size:14px;color:#68736c;margin-bottom:22px}
+label{display:block;font-size:13px;font-weight:bold;margin:13px 0 6px}
+input,select,textarea{width:100%;padding:13px;border:1px solid #d8ded7;background:#fff;border-radius:0}
+textarea{min-height:100px;resize:vertical}
+.booking-form .btn{width:100%;margin-top:20px}
+.payment{font-size:12px;color:#657068;margin-top:15px;text-align:center}
+.contact{text-align:center}
+.contact h2{font:42px Georgia,serif;color:var(--green);margin:12px 0}
+.contact p{color:#68736c;margin-bottom:20px}
+footer{background:var(--deep);color:white;text-align:center;padding:35px 15px}
+footer .logo{margin-bottom:12px}
+footer p{font-size:12px;color:#c4d0c8}
+@media(max-width:760px){
+ header{padding:17px 6%}
+ .menu{display:block}
+ nav{display:none;position:absolute;top:75px;left:0;width:100%;background:var(--deep);padding:25px;flex-direction:column}
+ nav.open{display:flex}
+ .hero{min-height:650px;height:85vh}
+ .intro,.kayak-grid{grid-template-columns:1fr;gap:25px}
+ .intro img,.kayak img{height:300px}
+ section{padding:65px 6%}
+ .gallery-grid{grid-template-columns:1fr 1fr}
+ .gallery-grid img{height:180px}
+ .booking-form{padding:23px}
+ .btn-outline{margin:12px 0 0}
+}
 </style>
 </head>
 <body>
+
 <header>
-  <div><div class="brand">WaiLusi</div><div class="tagline">RAIATEA · FRENCH POLYNESIA</div></div>
-  <nav>
-    <a href="#experience" data-en="Experience" data-fr="Expérience">Experience</a>
-    <a href="#story" data-en="Our island" data-fr="Notre île">Our island</a>
-    <a href="#booking" data-en="Book" data-fr="Réserver">Book</a>
-    <button class="lang" id="language" type="button" onclick="toggleLanguage()">FR Français</button>
-  </nav>
+ <a class="logo" href="#home">WaiLusi<small>RAIATEA · FRENCH POLYNESIA</small></a>
+ <button class="menu" onclick="document.querySelector('nav').classList.toggle('open')" aria-label="Open menu">☰</button>
+ <nav>
+  <a href="#home">HOME</a>
+  <a href="#kayaking">KAYAKING</a>
+  <a href="#about">OUR STORY</a>
+  <a href="#gallery">GALLERY</a>
+  <a href="#future">FUTURE ADVENTURES</a>
+  <a class="nav-book" href="#booking">BOOK NOW</a>
+ </nav>
 </header>
 
 <main>
-<section class="hero">
-  <div class="hero-inner">
-    <div class="eyebrow" data-en="A personal island experience" data-fr="Une expérience authentique de l'île">A personal island experience</div>
-    <h1 data-en="Discover the heart of Raiatea." data-fr="Découvrez le cœur de Raiatea.">Discover the heart of Raiatea.</h1>
-    <p data-en="Paddle through the peaceful Faaroa River, explore tropical plants, taste island fruits and discover the traditions of Polynesia with WaiLusi." data-fr="Pagayez sur la paisible rivière Faaroa, découvrez les plantes tropicales, goûtez les fruits de l'île et explorez les traditions polynésiennes avec WaiLusi.">Paddle through the peaceful Faaroa River, explore tropical plants, taste island fruits and discover the traditions of Polynesia with WaiLusi.</p>
-    <a class="btn" href="#booking" data-en="Request your experience" data-fr="Demander votre expérience">Request your experience</a>
-    <a class="btn outline" href="#experience" data-en="Discover the journey" data-fr="Découvrir l'expérience">Discover the journey</a>
-  </div>
+<section class="hero" id="home">
+ <div class="hero-content">
+  <div class="eyebrow">RAIATEA · FRENCH POLYNESIA</div>
+  <h1>Discover Raiatea.<br>Experience Nature.</h1>
+  <p>Explore the beauty of our island through unforgettable guided kayaking experiences and genuine Polynesian hospitality.</p>
+  <a class="btn" href="#booking">REQUEST A BOOKING</a>
+  <a class="btn btn-outline" href="#kayaking">EXPLORE KAYAKING</a>
+ </div>
 </section>
 
-<section id="experience">
-  <div class="section-head">
-    <div class="eyebrow" data-en="One connected experience" data-fr="Une expérience complète">One connected experience</div>
-    <h2 data-en="River, garden and island traditions." data-fr="Rivière, jardin et traditions de l'île.">River, garden and island traditions.</h2>
-    <p data-en="Slow down and connect with the natural beauty and culture of Raiatea in one guided experience." data-fr="Prenez le temps de découvrir la nature et la culture de Raiatea au fil d'une expérience guidée.">Slow down and connect with the natural beauty and culture of Raiatea in one guided experience.</p>
+<section>
+ <div class="intro">
+  <img src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1000&q=85" alt="Beautiful tropical nature">
+  <div>
+   <div class="eyebrow">WELCOME TO WAILUSI</div>
+   <h2>A different way to discover Raiatea.</h2>
+   <p>Welcome to WaiLusi, where nature, adventure and island hospitality come together.</p>
+   <p>Our vision is to share the extraordinary landscapes, natural beauty and stories of Raiatea with visitors from around the world.</p>
+   <p>We are beginning with guided kayaking experiences, with more adventures planned for the future.</p>
+   <a class="btn" href="#about">DISCOVER OUR STORY</a>
   </div>
-  <div class="cards">
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=900&q=80" alt="Lush tropical river scenery">
-      <div class="card-content"><div class="number">01 · EXPLORE</div><h3 data-en="Faaroa River kayaking" data-fr="Kayak sur la rivière Faaroa">Faaroa River kayaking</h3><p data-en="Paddle through tropical scenery and enjoy the calm atmosphere of one of Raiatea's remarkable natural places." data-fr="Pagayez au cœur d'un paysage tropical et profitez de la tranquillité d'un lieu naturel remarquable de Raiatea.">Paddle through tropical scenery and enjoy the calm atmosphere of one of Raiatea's remarkable natural places.</p></div>
-    </article>
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80" alt="Green tropical garden">
-      <div class="card-content"><div class="number">02 · DISCOVER</div><h3 data-en="Botanical garden walk" data-fr="Promenade au jardin botanique">Botanical garden walk</h3><p data-en="Discover tropical plants and learn about the natural world of the islands during a guided garden walk." data-fr="Découvrez les plantes tropicales et le monde naturel des îles lors d'une promenade guidée au jardin.">Discover tropical plants and learn about the natural world of the islands during a guided garden walk.</p></div>
-    </article>
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=900&q=80" alt="Fresh tropical fruit">
-      <div class="card-content"><div class="number">03 · TASTE</div><h3 data-en="Tropical fruit tasting" data-fr="Dégustation de fruits tropicaux">Tropical fruit tasting</h3><p data-en="Enjoy the flavors of tropical fruit and discover some of the produce grown in the islands, subject to seasonal availability." data-fr="Savourez des fruits tropicaux et découvrez quelques produits cultivés dans les îles, selon les disponibilités de la saison.">Enjoy the flavors of tropical fruit and discover some of the produce grown in the islands, subject to seasonal availability.</p></div>
-    </article>
-    <article class="card">
-      <img src="https://images.unsplash.com/photo-1551009175-8a68da93d5f5?auto=format&fit=crop&w=900&q=80" alt="Tropical coconut palms">
-      <div class="card-content"><div class="number">04 · CONNECT</div><h3 data-en="Traditional coconut demonstration" data-fr="Démonstration traditionnelle autour de la noix de coco">Traditional coconut demonstration</h3><p data-en="Discover traditional uses of the coconut and learn how this versatile fruit has a place in island life." data-fr="Découvrez les usages traditionnels de la noix de coco et la place de ce fruit polyvalent dans la vie insulaire.">Discover traditional uses of the coconut and learn how this versatile fruit has a place in island life.</p></div>
-    </article>
-  </div>
+ </div>
 </section>
 
-<section class="story" id="story">
-  <div class="story-grid">
-    <div>
-      <div class="eyebrow" data-en="Mana · Nature · Culture" data-fr="Mana · Nature · Culture">Mana · Nature · Culture</div>
-      <h2 data-en="More than a tour. A connection to the island." data-fr="Plus qu'une excursion : une rencontre avec l'île.">More than a tour. A connection to the island.</h2>
-      <p data-en="WaiLusi invites you to experience Raiatea at a gentler pace: on the river, among tropical plants, through local flavors and traditional knowledge." data-fr="WaiLusi vous invite à découvrir Raiatea à un rythme plus doux : sur la rivière, au milieu des plantes tropicales, à travers les saveurs locales et les savoirs traditionnels.">WaiLusi invites you to experience Raiatea at a gentler pace: on the river, among tropical plants, through local flavors and traditional knowledge.</p>
-      <span class="pill" data-en="Nature" data-fr="Nature">Nature</span><span class="pill" data-en="Culture" data-fr="Culture">Culture</span><span class="pill" data-en="Local flavors" data-fr="Saveurs locales">Local flavors</span>
-    </div>
-    <img src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=1000&q=85" alt="Tropical island landscape">
+<section class="kayak" id="kayaking">
+ <div class="section-head">
+  <div class="eyebrow">OUR EXPERIENCE</div>
+  <h2>Explore by Kayak</h2>
+  <p>Discover the natural beauty of Raiatea from the water.</p>
+ </div>
+ <div class="kayak-grid">
+  <img src="https://images.unsplash.com/photo-1504851149312-7a075b496cc7?auto=format&fit=crop&w=1100&q=85" alt="Outdoor adventure in nature">
+  <div>
+   <div class="eyebrow">AVAILABLE NOW</div>
+   <h2>The beauty of the Faaroa River</h2>
+   <p>Experience the peaceful beauty of the tropical river surrounded by lush vegetation and the spectacular natural scenery of Raiatea.</p>
+   <p>Enjoy a guided experience while discovering the environment and local stories along the way.</p>
+   <div class="details">
+    <div class="detail">Guided experience</div>
+    <div class="detail">Raiatea, Polynesia</div>
+    <div class="detail">Booking required</div>
+   </div>
+   <a class="btn" href="#booking">ENQUIRE ABOUT KAYAKING</a>
   </div>
+ </div>
+</section>
+
+<section id="about">
+ <div class="section-head">
+  <div class="eyebrow">OUR STORY</div>
+  <h2>More than an adventure.</h2>
+  <p>WaiLusi was created with a vision to share the beauty of Raiatea and create meaningful experiences for visitors.</p>
+ </div>
+ <div class="story" style="padding:45px 25px">
+  <h2>Our island. Our nature. Our story.</h2>
+  <p>We believe the best way to discover an island is to connect with its landscapes, culture and people. Through WaiLusi, we hope to share the spirit of Raiatea with every guest.</p>
+ </div>
+</section>
+
+<section id="gallery">
+ <div class="section-head">
+  <div class="eyebrow">MOMENTS IN PARADISE</div>
+  <h2>Discover the beauty</h2>
+  <p>A glimpse of the natural world that makes French Polynesia so special.</p>
+ </div>
+ <div class="gallery-grid">
+  <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=700&q=80" alt="Tropical island landscape">
+  <img src="https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=700&q=80" alt="Green tropical landscape">
+  <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=700&q=80" alt="Mountain scenery">
+ </div>
+</section>
+
+<section class="future" id="future">
+ <div class="section-head">
+  <div class="eyebrow">THE WAILUSI VISION</div>
+  <h2>More adventures ahead</h2>
+  <p>Our journey is just beginning.</p>
+ </div>
+ <div class="future-card">
+  <h3>Explore more of Raiatea in the future.</h3>
+  <p>We dream of bringing visitors even more ways to experience our island, including hiking, cycling, 4x4 adventures and other nature experiences.</p>
+  <p style="margin-top:15px"><strong>More experiences are planned. Stay connected with WaiLusi.</strong></p>
+ </div>
 </section>
 
 <section class="booking" id="booking">
-  <div class="section-head">
-    <div class="eyebrow" data-en="Start planning" data-fr="Préparez votre visite">Start planning</div>
-    <h2 data-en="Request your WaiLusi experience" data-fr="Demandez votre expérience WaiLusi">Request your WaiLusi experience</h2>
-    <p data-en="Tell us what you have in mind. We'll contact you on WhatsApp to discuss availability, pricing, meeting point and details." data-fr="Dites-nous ce que vous souhaitez. Nous vous contacterons sur WhatsApp pour discuter des disponibilités, du tarif, du lieu de rendez-vous et des détails.">Tell us what you have in mind. We'll contact you on WhatsApp to discuss availability, pricing, meeting point and details.</p>
-  </div>
-  <form id="bookingForm">
-    <label for="name" data-en="Your name" data-fr="Votre nom">Your name</label>
-    <input id="name" required autocomplete="name" placeholder="Name / Nom">
-    <label for="date" data-en="Preferred date" data-fr="Date souhaitée">Preferred date</label>
-    <input id="date" type="date" required>
-    <label for="guests" data-en="Number of guests" data-fr="Nombre de participants">Number of guests</label>
-    <select id="guests" required>
-      <option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6+">6+</option>
-    </select>
-    <label for="language" data-en="Preferred language" data-fr="Langue souhaitée">Preferred language</label>
-    <select id="language">
-      <option value="English">English</option><option value="Français">Français</option>
-    </select>
-    <label for="message" data-en="Questions or special requests" data-fr="Questions ou demandes particulières">Questions or special requests</label>
-    <textarea id="message" placeholder="Tell us a little about your plans... / Parlez-nous de votre projet..."></textarea>
-    <button class="btn" type="submit" data-en="Send request on WhatsApp" data-fr="Envoyer la demande sur WhatsApp">Send request on WhatsApp</button>
-    <p class="small" data-en="This is a booking request, not a confirmed reservation. We will personally confirm availability, price, meeting point and details. Payment is on the day; no online payment is taken here." data-fr="Il s'agit d'une demande, et non d'une réservation confirmée. Nous confirmerons personnellement la disponibilité, le tarif, le lieu de rendez-vous et les détails. Le paiement se fait le jour de l'activité ; aucun paiement en ligne n'est effectué ici.">This is a booking request, not a confirmed reservation. We will personally confirm availability, price, meeting point and details. Payment is on the day; no online payment is taken here.</p>
-  </form>
+ <div class="section-head">
+  <div class="eyebrow">LET'S PLAN YOUR EXPERIENCE</div>
+  <h2>Request your adventure</h2>
+  <p>Send us your preferred date and group details. We will personally contact you to confirm availability.</p>
+ </div>
+ <form class="booking-form" id="bookingForm">
+  <h3>Booking enquiry</h3>
+  <p>Currently accepting enquiries for guided kayaking.</p>
+  <label for="name">Your full name</label>
+  <input id="name" required placeholder="Your name">
+  <label for="email">Email address</label>
+  <input id="email" type="email" required placeholder="you@example.com">
+  <label for="date">Preferred date</label>
+  <input id="date" type="date" required>
+  <label for="guests">Number of guests</label>
+  <select id="guests">
+   <option>1 guest</option><option selected>2 guests</option>
+   <option>3 guests</option><option>4 guests</option>
+   <option>5 guests</option><option>6 guests</option>
+   <option>7 guests</option><option>8 guests</option>
+  </select>
+  <label for="time">Preferred time</label>
+  <select id="time">
+   <option>Morning</option><option>Afternoon</option>
+  </select>
+  <label for="message">Additional information</label>
+  <textarea id="message" placeholder="Any questions or details you would like to share?"></textarea>
+  <button class="btn" type="submit">SEND BOOKING REQUEST VIA WHATSAPP</button>
+  <div class="payment">No online payment required. Payment is made in person on the day of your confirmed experience. Sending an enquiry does not automatically confirm a booking.</div>
+ </form>
+</section>
+
+<section class="contact">
+ <div class="eyebrow">GET IN TOUCH</div>
+ <h2>We would love to hear from you.</h2>
+ <p>Have a question about kayaking or visiting Raiatea? Contact us.</p>
+ <a class="btn" href="#booking">CONTACT WAILUSI</a>
 </section>
 </main>
 
 <footer>
-  <div class="brand">WaiLusi</div>
-  <p data-en="Discover Raiatea naturally." data-fr="Découvrez Raiatea au naturel.">Discover Raiatea naturally.</p>
-  <p>Raiatea · French Polynesia</p>
-  <p><a href="https://wa.me/68987349362" target="_blank" rel="noopener">Contact WaiLusi on WhatsApp</a></p>
-  <p class="small">© <span id="year"></span> WaiLusi. <span data-en="All rights reserved." data-fr="Tous droits réservés.">All rights reserved.</span></p>
+ <div class="logo">WaiLusi<small>RAIATEA · FRENCH POLYNESIA</small></div>
+ <p>Discover Raiatea. Experience Nature.</p>
+ <p style="margin-top:12px">© <span id="year"></span> WaiLusi. All rights reserved.</p>
 </footer>
 
 <script>
-let currentLang='en';
-function toggleLanguage(){
-  currentLang=currentLang==='en'?'fr':'en';
-  document.documentElement.lang=currentLang;
-  document.querySelectorAll('[data-en]').forEach(el=>{
-    el.textContent=el.dataset[currentLang];
-  });
-  document.getElementById('language').textContent=currentLang==='en'?'FR Français':'EN English';
-}
-document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('year').textContent = new Date().getFullYear();
+
 document.getElementById('bookingForm').addEventListener('submit',function(e){
-  e.preventDefault();
-  const name=document.getElementById('name').value.trim();
-  const date=document.getElementById('date').value;
-  const guests=document.getElementById('guests').value;
-  const language=document.getElementById('language').value;
-  const message=document.getElementById('message').value.trim();
-  const text=`WaiLusi booking request / Demande de réservation\nName / Nom: ${name}\nPreferred date / Date souhaitée: ${date}\nGuests / Participants: ${guests}\nLanguage / Langue: ${language}\nQuestions / Requests: ${message||'None'}\n\nPlease confirm availability, price, meeting point and tour details. This is a request only, not a confirmed booking.`;
-  window.open('https://wa.me/68987349362?text='+encodeURIComponent(text),'_blank');
+ e.preventDefault();
+
+ // REPLACE THIS WITH YOUR WHATSAPP NUMBER.
+ // Include country code, digits only. Example: 689XXXXXXXX
+ const whatsappNumber = "689XXXXXXXX";
+
+ if(whatsappNumber === "689XXXXXXXX"){
+  alert("Please contact WaiLusi directly while our booking contact is being set up.");
+  return;
+ }
+
+ const message = [
+  "Hello WaiLusi! I would like to request a kayaking booking.",
+  "Name: "+document.getElementById('name').value,
+  "Email: "+document.getElementById('email').value,
+  "Date: "+document.getElementById('date').value,
+  "Guests: "+document.getElementById('guests').value,
+  "Preferred time: "+document.getElementById('time').value,
+  "Additional information: "+document.getElementById('message').value
+ ].join("\n");
+
+ window.open("https://wa.me/"+whatsappNumber+"?text="+encodeURIComponent(message),"_blank");
 });
 </script>
 </body>
