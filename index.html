@@ -129,6 +129,7 @@ url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fi
 .form-note{font-size:.8rem;color:var(--muted);margin:14px 0}
 .form-actions{display:flex;gap:12px;flex-wrap:wrap}
 .form-actions button{flex:1;min-width:170px}
+.form-actions button:disabled{opacity:.55;cursor:not-allowed}
 /* POLICIES */
 .policy-list{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .policy{background:white;padding:25px;border-radius:14px;border:1px solid #eee}
@@ -194,7 +195,6 @@ footer p{color:rgba(255,255,255,.65);font-size:.88rem;margin-top:8px}
 <header>
  <div class="container navbar">
   <a class="brand" href="#home" aria-label="WaiLusi home">
-   <!-- Replace this placeholder with your chosen logo image later -->
    <div class="logo-placeholder">WL</div>
    <div>
     <div class="brand-name">WaiLusi</div>
@@ -219,7 +219,6 @@ footer p{color:rgba(255,255,255,.65);font-size:.88rem;margin-top:8px}
 </header>
 
 <main>
-<!-- HERO -->
 <section class="hero" id="home">
  <div class="container hero-content">
   <div class="eyebrow" data-en="Welcome to Raiatea · French Polynesia" data-fr="Bienvenue à Raiatea · Polynésie française">Welcome to Raiatea · French Polynesia</div>
@@ -233,7 +232,6 @@ footer p{color:rgba(255,255,255,.65);font-size:.88rem;margin-top:8px}
  </div>
 </section>
 
-<!-- INTRODUCTION -->
 <section class="section">
  <div class="container intro-grid">
   <div>
@@ -247,7 +245,6 @@ footer p{color:rgba(255,255,255,.65);font-size:.88rem;margin-top:8px}
  </div>
 </section>
 
-<!-- TOURS -->
 <section class="section tours-section" id="tours">
  <div class="container">
   <div class="eyebrow" data-en="Explore with WaiLusi" data-fr="Explorez avec WaiLusi">Explore with WaiLusi</div>
@@ -310,7 +307,6 @@ footer p{color:rgba(255,255,255,.65);font-size:.88rem;margin-top:8px}
  </div>
 </section>
 
-<!-- STORY -->
 <section class="section" id="story">
  <div class="container journey-grid">
   <img class="journey-image" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1100&q=85" alt="Lush tropical forest">
@@ -327,7 +323,6 @@ footer p{color:rgba(255,255,255,.65);font-size:.88rem;margin-top:8px}
  </div>
 </section>
 
-<!-- ACTIVITIES -->
 <section class="section activities">
  <div class="container">
   <div class="eyebrow" data-en="More than kayaking" data-fr="Bien plus qu'une balade en kayak">More than kayaking</div>
@@ -344,7 +339,6 @@ footer p{color:rgba(255,255,255,.65);font-size:.88rem;margin-top:8px}
  </div>
 </section>
 
-<!-- GALLERY -->
 <section class="section" id="gallery">
  <div class="container">
   <div class="eyebrow" data-en="A glimpse of Raiatea" data-fr="Un aperçu de Raiatea">A glimpse of Raiatea</div>
@@ -359,7 +353,6 @@ footer p{color:rgba(255,255,255,.65);font-size:.88rem;margin-top:8px}
  </div>
 </section>
 
-<!-- CALL TO ACTION -->
 <section class="cta">
  <div class="container">
   <div class="eyebrow" data-en="Your Raiatea adventure awaits" data-fr="Votre aventure à Raiatea vous attend">Your Raiatea adventure awaits</div>
@@ -369,7 +362,6 @@ footer p{color:rgba(255,255,255,.65);font-size:.88rem;margin-top:8px}
  </div>
 </section>
 
-<!-- BOOKING FORM -->
 <section class="section booking-section" id="booking">
  <div class="container">
   <div class="eyebrow" data-en="Start planning your visit" data-fr="Préparez votre visite">Start planning your visit</div>
@@ -379,7 +371,7 @@ footer p{color:rgba(255,255,255,.65);font-size:.88rem;margin-top:8px}
   <div class="booking-layout">
    <div class="booking-info">
     <h3 style="font-size:1.6rem;color:var(--green)" data-en="Let's plan your river adventure" data-fr="Préparons votre aventure sur la rivière">Let's plan your river adventure</h3>
-    <p data-en="Complete the enquiry form with your details and preferred date. You can send your request through WhatsApp or email." data-fr="Remplissez le formulaire avec vos coordonnées et la date souhaitée. Vous pouvez envoyer votre demande par WhatsApp ou par e-mail.">Complete the enquiry form with your details and preferred date. You can send your request through WhatsApp or email.</p>
+    <p data-en="Complete the enquiry form with your details and preferred date. Send your request directly through WhatsApp." data-fr="Remplissez le formulaire avec vos coordonnées et la date souhaitée. Envoyez votre demande directement par WhatsApp.">Complete the enquiry form with your details and preferred date. Send your request directly through WhatsApp.</p>
     <ul>
      <li data-en="✓ Morning departure: 9:00 AM" data-fr="✓ Départ le matin : 9h00">✓ Morning departure: 9:00 AM</li>
      <li data-en="✓ Afternoon departure: 1:00 PM" data-fr="✓ Départ l'après-midi : 13h00">✓ Afternoon departure: 1:00 PM</li>
@@ -437,15 +429,14 @@ footer p{color:rgba(255,255,255,.65);font-size:.88rem;margin-top:8px}
     <p class="form-note" data-en="No online payment or deposit is required. Payment is made in person on the day of the tour. Your booking is confirmed only after WaiLusi agrees on the date, time and number of guests." data-fr="Aucun paiement en ligne ni acompte n'est demandé. Le paiement s'effectue sur place, le jour de l'excursion. Votre réservation est confirmée uniquement après accord de WaiLusi sur la date, l'heure et le nombre de participants.">No online payment or deposit is required. Payment is made in person on the day of the tour. Your booking is confirmed only after WaiLusi agrees on the date, time and number of guests.</p>
 
     <div class="form-actions">
-     <button class="btn btn-dark" type="button" onclick="sendBooking('whatsapp')" data-en="Send by WhatsApp" data-fr="Envoyer par WhatsApp">Send by WhatsApp</button>
-     <button class="btn btn-primary" type="button" onclick="sendBooking('email')" data-en="Send by Email" data-fr="Envoyer par e-mail">Send by Email</button>
+     <button class="btn btn-dark" type="button" onclick="sendBooking()" data-en="Send by WhatsApp" data-fr="Envoyer par WhatsApp">Send by WhatsApp</button>
+     <button class="btn btn-primary" type="button" disabled data-en="Email coming soon" data-fr="E-mail bientôt disponible">Email coming soon</button>
     </div>
    </form>
   </div>
  </div>
 </section>
 
-<!-- POLICIES -->
 <section class="section" id="policies">
  <div class="container">
   <div class="eyebrow" data-en="Before your tour" data-fr="Avant votre excursion">Before your tour</div>
@@ -486,7 +477,6 @@ footer p{color:rgba(255,255,255,.65);font-size:.88rem;margin-top:8px}
  </div>
 </section>
 
-<!-- CONTACT -->
 <section class="section contact-section" id="contact">
  <div class="container contact-grid">
   <div>
@@ -497,15 +487,14 @@ footer p{color:rgba(255,255,255,.65);font-size:.88rem;margin-top:8px}
   <div class="contact-box">
    <h3 style="font-size:1.6rem;color:var(--green)" data-en="Get in touch" data-fr="Restons en contact">Get in touch</h3>
    <p data-en="Contact us for pricing, availability and booking information." data-fr="Contactez-nous pour connaître les tarifs, les disponibilités et les modalités de réservation.">Contact us for pricing, availability and booking information.</p>
-   <!-- Replace the placeholder WhatsApp number in the script below -->
    <div class="contact-links">
-    <a class="contact-link" href="#booking">
+    <a class="contact-link" href="https://wa.me/68987349362" target="_blank" rel="noopener">
      WhatsApp
-     <small data-en="Send us a booking enquiry" data-fr="Envoyez-nous une demande de réservation">Send us a booking enquiry</small>
+     <small data-en="Message WaiLusi directly" data-fr="Contactez WaiLusi directement">Message WaiLusi directly</small>
     </a>
     <a class="contact-link" href="#booking">
      Email
-     <small data-en="Send us your questions" data-fr="Envoyez-nous vos questions">Send us your questions</small>
+     <small data-en="Coming soon" data-fr="Bientôt disponible">Coming soon</small>
     </a>
    </div>
    <p class="social-note" data-en="Facebook and Instagram coming soon." data-fr="Facebook et Instagram bientôt disponibles.">Facebook and Instagram coming soon.</p>
@@ -534,18 +523,13 @@ footer p{color:rgba(255,255,255,.65);font-size:.88rem;margin-top:8px}
 </footer>
 
 <script>
-/* ==================================================
-   WAILUSI WEBSITE SETTINGS
-   Add your real contact details when they are ready.
-   ================================================== */
+/* WAILUSI WEBSITE SETTINGS */
 
-// Replace with your real WhatsApp number.
-// Use international format with country code, digits only.
-// Example format: 689XXXXXXXX
+// WaiLusi WhatsApp number — French Polynesia country code included.
 const WAILUSI_WHATSAPP = "68987349362";
 
-// Replace with your active business email address.
-const WAILUSI_EMAIL = "YOUR_EMAIL_HERE";
+// Email will be added when the business email is created.
+const WAILUSI_EMAIL = "";
 
 let currentLanguage = "en";
 
@@ -599,6 +583,7 @@ dateInput.min = localToday;
 
 function getBookingMessage(){
  const form = document.getElementById("bookingForm");
+
  if(!form.reportValidity()) return null;
 
  const data = new FormData(form);
@@ -630,28 +615,22 @@ Please check availability and confirm my booking request.
 Thank you.`;
 }
 
-function sendBooking(method){
+function sendBooking(){
  const message = getBookingMessage();
  if(!message) return;
 
- if(method === "whatsapp"){
-  if(WAILUSI_WHATSAPP === "689XXXXXXXX"){
-   alert("WaiLusi WhatsApp number has not been added yet. Please contact WaiLusi directly or use your email once it is configured.");
-   return;
-  }
-  const url = "https://wa.me/" + WAILUSI_WHATSAPP + "?text=" + encodeURIComponent(message);
-  window.open(url,"_blank");
+ const whatsappNumber = WAILUSI_WHATSAPP.replace(/\D/g,"");
+
+ if(!whatsappNumber){
+  alert("The WaiLusi WhatsApp number is not configured yet.");
+  return;
  }
 
- if(method === "email"){
-  if(WAILUSI_EMAIL === "YOUR_EMAIL_HERE"){
-   alert("WaiLusi email address has not been added yet. Please use WhatsApp once your number is configured.");
-   return;
-  }
-  const subject = encodeURIComponent("WaiLusi Booking Enquiry - " + document.getElementById("fullName").value);
-  const body = encodeURIComponent(message);
-  window.location.href = "mailto:" + WAILUSI_EMAIL + "?subject=" + subject + "&body=" + body;
- }
+ const whatsappURL =
+  "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
+
+ // Direct navigation is more reliable on iPhone than opening a popup.
+ window.location.assign(whatsappURL);
 }
 
 document.getElementById("year").textContent = new Date().getFullYear();
